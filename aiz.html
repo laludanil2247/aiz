@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/a.png" />
+  <title>maapnya nanin</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hearts-container"></div>
+  <main class="main" role="main">
+    <h3 class="modal-title">Adee, abang minta maaff yaaaa:(</h3>
+    <img class="hero" src="img/b.png" alt="Foto" onerror="this.src='img/a.png';" style="width: fit-content; height: fit-content;" />
+    <h3 class="modal-title">Maafin aku yaa sayangg</h3>
+
+    <section class="buttons" aria-label="Area tombol">
+      <button id="btnYes" class="button button2" type="button" onclick="return show_modal();">IYA SAYANGKU</button>
+      <button id="Bn" class="button button1" type="button">MALES</button>
+    </section>
+  </main>
+
+  <footer> </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content" style="color:#333">
+        <canvas id="confettiModal" class="confetti-canvas"></canvas>
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Makasih yaaa sayanggg udah mau maafin akuu🥹</h3>
+          <h3 class="modal-title" id="modalTitle">Aku janjii buat jadi lebih baik lagii💙</h3>
+        </div>
+        <div class="modal-body">
+        <img id="image_modal" src="img/danil.jpg" alt="Aiz&Danil" onerror="this.src='img/default.jpg';" style="width: 150px; height: 200px; justify-content: center;"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="justify-content: center;">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="errorSfx" preload="auto">
+    <source src="blue.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- JS libs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+    const container = document.getElementById("hearts-container");
+
+    function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    container.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+    }
+
+    setInterval(createHeart, 600);
+    </script>
+
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
