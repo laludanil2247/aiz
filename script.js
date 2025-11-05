@@ -122,9 +122,10 @@ function show_modal() {
   closeBtn.addEventListener('click', () => {
     // Tampilkan pesan kecil
     setTimeout(() => {
-      alert("bentar-bentar satu lagi 😆");
+      alert("bentar-bentar satu lagi sayangkuuu😆");
       // Redirect ke halaman selanjutnya
       window.location.href = "bunga/index.html";
     }, 500); // jeda setengah detik setelah klik sebelum alert muncul
   });
 })();
+
