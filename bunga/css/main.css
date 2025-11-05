@@ -1391,3 +1391,45 @@ body {
   display: none;
 }
 
+/* Responsive fix untuk layar HP */
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .flowers {
+    transform: scale(0.6);
+  }
+
+  .flower {
+    bottom: 5vmin;
+  }
+
+  /* Jika panah pakai icon besar, kecilkan */
+  .arrow, .arrow-btn, .arrow-icon {
+    transform: scale(0.6);
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+/* Untuk layar HP sangat kecil */
+@media (max-width: 480px) {
+  .flowers {
+    transform: scale(0.45);
+  }
+
+  .arrow, .arrow-btn, .arrow-icon {
+    transform: scale(0.5);
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+.arrow, .arrow-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
