@@ -319,3 +319,31 @@ body {
   color: #ff4f81;
   opacity: 0.8;
 }
+/* 📱 Responsive fix untuk tampilan mobile */
+@media (max-width: 600px) {
+  .main {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .hero {
+    width: 80vw;
+  }
+
+  .buttons {
+    width: 90vw;
+    height: 260px;
+  }
+
+  .slideshow {
+    width: 85vw;
+    height: 55vh;
+    bottom: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
